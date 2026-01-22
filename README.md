@@ -50,7 +50,7 @@ Ideal para:
    python main.py
    
    # O si usas el ejecutable generado
-   ./dist/UltraShare/UltraShare.exe
+   ./dist/UltraShare.exe
    ```
 
 2. **Configura tu sesión**:
