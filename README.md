@@ -90,7 +90,8 @@ Possible next improvements:
 - Document known limitations for multi-monitor setups.
 - Add a packaged release build for users who do not want to run from source.
 - Add basic smoke checks for startup and window detection.
+- Add a dedicated license file to match the project license note.
 
 ## License
 
-This project is released under the MIT License. See [LICENSE](LICENSE) for details.
+This project is documented as MIT-licensed in the original project notes. A dedicated `LICENSE` file should be added before packaging or redistribution.
