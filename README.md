@@ -82,6 +82,10 @@ Basic workflow:
 - Multi-monitor setups work best when UltraShare is started on the monitor where the sharing region will be used.
 - UltraShare is currently intended for local Windows desktop use, not browser-based screen sharing by itself.
 
+## Contributing
+
+Focused improvements are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for setup steps, manual testing notes, and pull request guidelines.
+
 ## Roadmap
 
 Possible next improvements:
