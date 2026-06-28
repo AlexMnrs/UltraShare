@@ -1,79 +1,96 @@
-# 📺 UltraShare
+# UltraShare
 
-**Comparte pantalla de forma profesional en monitores Ultra-Wide.**
+UltraShare is a Windows desktop utility for sharing a clean standard-size region from an ultrawide monitor.
 
-UltraShare soluciona el problema de los bordes negros y la visualización pequeña al compartir pantalla desde monitores 21:9 o 32:9. Crea una región virtual (overlay) de tamaño estándar (1080p, 720p) y permite "encajar" ventanas automáticamente dentro de ella para que tus espectadores vean exactamente lo que quieres, a pantalla completa y sin distracciones.
+It helps presenters, streamers, teachers, and remote workers avoid black bars, tiny shared content, and awkward 21:9 or 32:9 screen-sharing layouts. The app creates a visible overlay region, snaps a selected window into that region, and keeps the shared window aligned while you work.
 
-Ideal para:
-- 🎥 Presentaciones en Microsoft Teams, Zoom o Google Meet sin bordes negros.
-- 🖥️ Usuarios con monitores Ultrawide que quieren cuidar la experiencia del espectador.
-- 🚀 Grabación de tutoriales o demos en resolución estándar.
+## Why It Exists
 
----
+Ultrawide monitors are great for productivity, but they often look bad in video calls and recordings. When you share the whole screen, viewers may see large black bars or content that is too small to read.
 
-## ✨ Características
+UltraShare lets you prepare a 16:9-friendly workspace on top of your ultrawide desktop, then share only the window that has been snapped into that area.
 
-- 🎯 **Región Persistente**: Marco visual "Always on Top" que delimita tu área de transmisión.
-- 🧲 **Smart Snap**: Ajusta cualquier ventana al tamaño exacto de la región con un solo clic.
-- 🔗 **Smart Move**: Al mover el marco, la ventana ajustada se mueve con él automáticamente como si estuviera pegada.
-- 🛡️ **Auto Desvinculación**: Si mueves manualmente la ventana fuera del marco, UltraShare lo detecta y libera el vínculo.
-- 📏 **Presets de Resolución**: Incluye tamaños optimizados como 1280x720 (Teams) y 1920x1080 (Full HD).
+## Use Cases
 
-## 🛠️ Requisitos
+- Microsoft Teams, Zoom, or Google Meet presentations from an ultrawide monitor.
+- Tutorial and demo recordings in standard 720p or 1080p layouts.
+- Cleaner screen sharing for viewers on laptops or normal 16:9 displays.
+- Keeping a selected app window aligned with a visible presentation frame.
 
-- **Sistema Operativo**: Windows 10 / 11 (Requiere API Win32).
-- **Lenguaje**: [Python 3.10+](https://www.python.org/)
-- **Dependencias**: `customtkinter`, `pywin32`, `pillow` (ver requirements.txt).
+## Features
 
-## � Instalación
+- Persistent always-on-top overlay frame for the sharing area.
+- Smart Snap to fit a selected window into the overlay region.
+- Smart Move to keep the snapped window attached when the frame moves.
+- Automatic unlinking when the target window is moved manually.
+- Resolution presets such as 1280x720 and 1920x1080.
+- Dark desktop UI built with CustomTkinter.
 
-1. **Clona el repositorio**:
-   ```bash
-   git clone https://github.com/alexmnrs/UltraShare.git
-   ```
-2. **Navega al directorio**:
-   ```bash
-   cd UltraShare
-   ```
-3. **Instala dependencias**:
-   ```bash
-   python -m venv .venv
-   .\.venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
+## Requirements
 
-## 💻 Uso
+- Windows 10 or Windows 11.
+- Python 3.10 or newer.
+- Win32 desktop APIs through `pywin32`.
+- Python dependencies listed in `requirements.txt`:
+  - `customtkinter`
+  - `pywin32`
+  - `pillow`
+  - `keyboard`
+  - `mouse`
 
-1. **Ejecuta la aplicación**:
-   ```bash
-   # Desde código fuente
-   python main.py
-   
-   # O si usas el ejecutable generado
-   ./dist/UltraShare.exe
-   ```
+## Installation
 
-2. **Configura tu sesión**:
-   - Selecciona el tamaño deseado en el Panel de Control (ej. "Teams Optimized").
-   - Coloca la ventana que quieres compartir debajo del marco.
-   - Selecciona la ventana en la lista y pulsa **"SNAP!"**.
+Clone the repository:
 
-3. **Comparte**:
-   - En Teams/Zoom, comparte **solo la ventana** que has ajustado.
+```bash
+git clone https://github.com/AlexMnrs/UltraShare.git
+cd UltraShare
+```
 
-## ⚠️ Notas Importantes
+Create and activate a virtual environment:
 
-- **Modo Administrador**: Algunas aplicaciones (como el Administrador de Tareas) pueden requerir que ejecutes UltraShare como administrador para poder manipularlas.
-- **Multimonitor**: UltraShare funciona mejor si inicias la aplicación en el monitor donde vas a trabajar.
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
 
-## 👨� Autor
+Install dependencies:
 
-**Alex Monrás**
-*SysAdmin & Entusiasta del Desarrollo*
+```powershell
+pip install -r requirements.txt
+```
 
-## 📄 Licencia
+## Usage
 
-Este proyecto está bajo la Licencia MIT.
+Run the app from source:
 
----
-© 2026 Alex Monrás.
+```powershell
+python main.py
+```
+
+Basic workflow:
+
+1. Choose a target size in the control panel, such as `Teams Optimized (1280x720)`.
+2. Move the overlay frame to the area you want to use for sharing.
+3. Select the application window you want to present.
+4. Use Snap to fit that window into the overlay region.
+5. In your meeting or recording app, share the snapped application window.
+
+## Notes
+
+- Some elevated applications may require UltraShare to run as administrator before their windows can be moved.
+- Multi-monitor setups work best when UltraShare is started on the monitor where the sharing region will be used.
+- UltraShare is currently intended for local Windows desktop use, not browser-based screen sharing by itself.
+
+## Roadmap
+
+Possible next improvements:
+
+- Add screenshots or a short demo GIF to show the workflow.
+- Document known limitations for multi-monitor setups.
+- Add a packaged release build for users who do not want to run from source.
+- Add basic smoke checks for startup and window detection.
+
+## License
+
+This project is released under the MIT License. See [LICENSE](LICENSE) for details.
