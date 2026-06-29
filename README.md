@@ -80,6 +80,12 @@ Basic workflow:
 4. Use Snap to fit that window into the overlay region.
 5. In your meeting or recording app, share the snapped application window.
 
+## Windows Executable
+
+UltraShare does not have an official downloadable release yet. A PyInstaller build path is documented in [docs/packaging.md](docs/packaging.md), and the repository includes a manual GitHub Actions workflow for building `UltraShare.exe` on Windows.
+
+Until a release artifact is published, the recommended path is to run the app from source.
+
 ## Notes
 
 - Some elevated applications may require UltraShare to run as administrator before their windows can be moved.
@@ -96,7 +102,7 @@ Possible next improvements:
 
 - Add real app screenshots or a short demo GIF.
 - Document known limitations for multi-monitor setups.
-- Add a packaged release build for users who do not want to run from source.
+- Publish a tested packaged release for users who do not want to run from source.
 - Add basic smoke checks for startup and window detection.
 
 ## License

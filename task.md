@@ -14,7 +14,8 @@
   - [x] **Auto Unsnap**: detaches the target window if it is moved externally.
   - [x] **Presets**: Teams-optimized and Full HD target sizes.
 - [ ] **Packaging**
-  - [ ] Document a PyInstaller build command.
+  - [x] Document a PyInstaller build command.
+  - [x] Add a manual Windows build workflow.
   - [ ] Publish a downloadable release artifact.
   - [ ] Create an `.msi` or `setup.exe` installer.
   - [ ] Add a custom icon.
