@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">UltraShare workflow preview</title>
+  <desc id="desc">An ultrawide desktop with a 16:9 sharing region and a window snapped into that region.</desc>
+  <rect width="1200" height="675" fill="#0b1120"/>
+  <rect x="70" y="80" width="1060" height="470" rx="18" fill="#111827" stroke="#334155" stroke-width="3"/>
+  <rect x="95" y="105" width="1010" height="420" rx="8" fill="#020617"/>
+  <text x="600" y="62" fill="#e5e7eb" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" text-anchor="middle">UltraShare turns an ultrawide desktop into a clean sharing region</text>
+
+  <rect x="155" y="155" width="660" height="371" fill="#101827" stroke="#22d3ee" stroke-width="6"/>
+  <rect x="155" y="155" width="660" height="36" fill="#22d3ee"/>
+  <text x="485" y="180" fill="#03151a" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">UltraShare Region 1280x720</text>
+
+  <rect x="205" y="225" width="560" height="245" rx="10" fill="#1f2937" stroke="#475569" stroke-width="2"/>
+  <rect x="205" y="225" width="560" height="38" rx="10" fill="#334155"/>
+  <circle cx="229" cy="244" r="6" fill="#ef4444"/>
+  <circle cx="249" cy="244" r="6" fill="#f59e0b"/>
+  <circle cx="269" cy="244" r="6" fill="#22c55e"/>
+  <text x="485" y="319" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700" text-anchor="middle">Selected app window</text>
+  <text x="485" y="358" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="18" text-anchor="middle">Snapped into the visible 16:9 frame</text>
+  <text x="485" y="391" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="16" text-anchor="middle">Share this window in Teams, Zoom, Meet, or a recorder</text>
+
+  <rect x="855" y="155" width="200" height="300" rx="14" fill="#172033" stroke="#334155" stroke-width="2"/>
+  <text x="955" y="198" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle">Control panel</text>
+  <rect x="880" y="230" width="150" height="42" rx="8" fill="#0f172a" stroke="#475569"/>
+  <text x="955" y="257" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="14" text-anchor="middle">1280x720</text>
+  <rect x="880" y="292" width="150" height="42" rx="8" fill="#0f172a" stroke="#475569"/>
+  <text x="955" y="319" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="14" text-anchor="middle">Select window</text>
+  <rect x="880" y="354" width="150" height="48" rx="8" fill="#22d3ee"/>
+  <text x="955" y="385" fill="#03151a" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">Snap</text>
+
+  <path d="M817 342 C840 342 842 342 858 342" fill="none" stroke="#22d3ee" stroke-width="4" stroke-linecap="round"/>
+  <path d="M845 328 L861 342 L845 356" fill="none" stroke="#22d3ee" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="160" y="578" width="880" height="46" rx="23" fill="#111827" stroke="#334155"/>
+  <text x="600" y="607" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="18" text-anchor="middle">Pick a target size, move the frame, snap a window, then share only that snapped window.</text>
+</svg>

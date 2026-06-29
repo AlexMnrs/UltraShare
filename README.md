@@ -4,6 +4,10 @@ UltraShare is a Windows desktop utility for sharing a clean standard-size region
 
 It helps presenters, streamers, teachers, and remote workers avoid black bars, tiny shared content, and awkward 21:9 or 32:9 screen-sharing layouts. The app creates a visible overlay region, snaps a selected window into that region, and keeps the shared window aligned while you work.
 
+## Workflow Preview
+
+![UltraShare workflow preview](docs/images/ultrashare-workflow.svg)
+
 ## Why It Exists
 
 Ultrawide monitors are great for productivity, but they often look bad in video calls and recordings. When you share the whole screen, viewers may see large black bars or content that is too small to read.
@@ -90,7 +94,7 @@ Focused improvements are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for set
 
 Possible next improvements:
 
-- Add screenshots or a short demo GIF to show the workflow.
+- Add real app screenshots or a short demo GIF.
 - Document known limitations for multi-monitor setups.
 - Add a packaged release build for users who do not want to run from source.
 - Add basic smoke checks for startup and window detection.

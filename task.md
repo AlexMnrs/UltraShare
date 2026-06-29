@@ -1,20 +1,20 @@
-# Progreso del Proyecto UltraShare
+# UltraShare project progress
 
-- [x] **Inicialización**
-    - [x] Estructura del proyecto completada (`core`, `ui`).
-    - [x] Dependencias instaladas (`customtkinter`, `pywin32`, etc).
-- [x] **Core (Backend)**
-    - [x] `WindowManager`: Enumeración y manejo de ventanas (Win32 API).
-- [x] **UI (Frontend)**
-    - [x] `OverlayWindow`: Marco transparente y redimensionable ("Always on Top").
-    - [x] `ControlPanel`: Selector de resolución y herramienta de Snapping.
-- [x] **Características**
-    - [x] **Smart Snap**: Ajuste automático de ventanas a la región.
-    - [x] **Smart Move**: Sincronización de movimiento overlay-ventana.
-    - [x] **Auto Unsnap**: Desvinculación automática si la ventana se mueve externamente.
-    - [x] **Presets**: Tamaños optimizados para Teams/FullHD.
-- [x] **Empaquetado**
-    - [x] Generar ejecutable con PyInstaller.
-- [ ] **Empaquetado Avanzado** (Opcional)
-    - [ ] Crear instalador .msi o setup.exe
-    - [ ] Icono personalizado
+- [x] **Initialization**
+  - [x] Project structure completed (`core`, `ui`).
+  - [x] Dependencies identified (`customtkinter`, `pywin32`, etc.).
+- [x] **Core**
+  - [x] `WindowManager`: window enumeration and Win32 API window handling.
+- [x] **UI**
+  - [x] `OverlayWindow`: transparent, resizable always-on-top frame.
+  - [x] `ControlPanel`: resolution selector and Smart Snap controls.
+- [x] **Features**
+  - [x] **Smart Snap**: automatically fits a selected window into the region.
+  - [x] **Smart Move**: keeps the overlay and attached window synchronized.
+  - [x] **Auto Unsnap**: detaches the target window if it is moved externally.
+  - [x] **Presets**: Teams-optimized and Full HD target sizes.
+- [ ] **Packaging**
+  - [ ] Document a PyInstaller build command.
+  - [ ] Publish a downloadable release artifact.
+  - [ ] Create an `.msi` or `setup.exe` installer.
+  - [ ] Add a custom icon.

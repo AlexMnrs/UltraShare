@@ -1,10 +1,10 @@
 """
     .SYNOPSIS
-        Gestor de ventanas para UltraShare.
+        Window manager for UltraShare.
     
     .DESCRIPTION
-        Este módulo, escrito en Python, se encarga de la interacción a bajo nivel con la API de Windows
-        para enumerar, mover, redimensionar y gestionar las ventanas del escritorio.
+        Handles low-level Windows API interaction for listing, moving, resizing,
+        and managing desktop windows.
         
     .NOTES
         File Name:  window_manager.py
@@ -21,17 +21,17 @@ import platform
 
 class WindowManager:
     """
-    Clase encargada de gestionar las ventanas del sistema operativo Windows.
-    Permite enumerar ventanas visibles, obtener la ventana activa y redimensionarlas.
+    Manages visible Windows desktop windows and exposes helper methods for
+    positioning selected windows inside the UltraShare overlay region.
     """
 
     def __init__(self):
         self.user32 = ctypes.windll.user32
-        self.user32.SetProcessDPIAware() # Asegurar que somos DPI-Aware para coordenadas correctas
+        self.user32.SetProcessDPIAware()
 
     def get_open_windows(self):
         """
-        Devuelve una lista de tuplas (hwnd, título) de todas las ventanas visibles y con título.
+        Return a list of (hwnd, title) tuples for visible windows with a title.
         """
         windows = []
 
@@ -39,7 +39,6 @@ class WindowManager:
             if win32gui.IsWindowVisible(hwnd):
                 title = win32gui.GetWindowText(hwnd)
                 if title:
-                    # Filtros opcionales: Evitar Program Manager, etc.
                     if title != "Program Manager": 
                         windows.append((hwnd, title))
         
@@ -48,7 +47,7 @@ class WindowManager:
 
     def get_active_window(self):
         """
-        Devuelve el handler (hwnd) y el título de la ventana actualmente activa (en foco).
+        Return the hwnd and title for the currently focused window.
         """
         hwnd = win32gui.GetForegroundWindow()
         title = win32gui.GetWindowText(hwnd)
@@ -56,32 +55,29 @@ class WindowManager:
 
     def set_window_pos(self, hwnd, x, y, width, height):
         """
-        Mueve y redimensiona una ventana especificada por su hwnd.
+        Move and resize a window by hwnd.
         
         Args:
-            hwnd: Handle de la ventana.
-            x (int): Posición X absoluta.
-            y (int): Posición Y absoluta.
-            width (int): Ancho deseado.
-            height (int): Alto deseado.
+            hwnd: Window handle.
+            x (int): Absolute X position.
+            y (int): Absolute Y position.
+            width (int): Target width.
+            height (int): Target height.
         """
         try:
-            # Flags: SWP_NOZORDER (no cambiar orden Z), SWP_SHOWWINDOW (asegurar que se muestre)
-            # SWP_NOACTIVATE podría ser útil si no queremos robar el foco, pero generalmente queremos verla.
             flags = win32con.SWP_NOZORDER | win32con.SWP_SHOWWINDOW
             
-            # Restaurar si está minimizada antes de mover
             if win32gui.IsIconic(hwnd):
                 win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)
 
             win32gui.SetWindowPos(hwnd, 0, x, y, width, height, flags)
             return True
         except Exception as e:
-            print(f"Error al mover la ventana {hwnd}: {e}")
+            print(f"Error moving window {hwnd}: {e}")
             return False
 
     def bring_to_front(self, hwnd):
-        """Trae la ventana al frente."""
+        """Bring a window to the foreground."""
         try:
             win32gui.ShowWindow(hwnd, win32con.SW_RESTORE)
             win32gui.SetForegroundWindow(hwnd)
@@ -89,7 +85,7 @@ class WindowManager:
             pass
 
     def get_window_rect(self, hwnd):
-        """Devuelve (x, y, width, height) de la ventana."""
+        """Return (x, y, width, height) for a window."""
         try:
             rect = win32gui.GetWindowRect(hwnd)
             x = rect[0]
